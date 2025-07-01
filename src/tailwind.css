@@ -28,7 +28,7 @@
     --mobile-home: url('./assets/HomePageGraphic.png');
     --evolvetext: url('./assets/EvolveText.png');
     --abstractwaves: url('./assets/AbstractWaves.png');
-    --sprakels: url('./assets/Sparkles.png');
+    --sparkels: url('./assets/Sparkles.png');
     --circles: url('./assets/Circles.png');
 }
 
@@ -38,7 +38,7 @@
     #root,
     .app
     {
-        @apply h-full w-full font-sans bg-gray-100 text-gray-500 py-6;
+        @apply h-full w-full font-sans bg-gray-20 text-gray-500 py-6;
     }
 }
 

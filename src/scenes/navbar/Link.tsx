@@ -9,12 +9,12 @@ type Props = {
 
 export const Link = ({page, selectedPage, setSelectedPage}: Props) => {
     const lowerCasePage = page.toLowerCase().replace(/ /g, "") as SelectedPage
-  return (
-    <AnchorLink
-    className={`${selectedPage === lowerCasePage ? "text-gray-500":'text-primary-300'} font-bold hover:text-gray-500 transition duration-500`}
-    href={lowerCasePage}
-    onClick={()=>setSelectedPage(lowerCasePage)}>
-        {page}
-    </AnchorLink>
-  )
+    return (
+        <AnchorLink
+        className={`${selectedPage === lowerCasePage ? "text-gray-500":'text-primary-500'} font-bold hover:text-gray-500 transition duration-500 font-Playfair`}
+        href={`#${lowerCasePage}`}
+        onClick={()=>setSelectedPage(lowerCasePage)}>
+            {page}
+        </AnchorLink>
+    )
 }
