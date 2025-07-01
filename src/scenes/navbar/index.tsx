@@ -30,7 +30,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage}: NavProps) => {
                                 <div className="flexBetween gap-8 text-sm">
                                     <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
                                     <Link page="Benefits" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
-                                    <Link page="Our Services" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
+                                    <Link page="Our Classes" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
                                     <Link page="Contact Us" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
                                     <Link page="About Us" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
                                 </div>
@@ -41,10 +41,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage}: NavProps) => {
                                 </div>
                             ):
                         <button className="rounded-full bg-secondary-500 p-2 cursor-pointer" onClick={()=> setIsMenuToggle(!isMenuToggle)}>
-                            { !isMenuToggle ? 
-                                <Bars3Icon className="w-6 h-6 text-white"/> :
-                                <XMarkIcon className="w-6 h-6 text-white"/>
-                            }
+                            <Bars3Icon className="w-6 h-6 text-white"/>
                         </button>
                         }
                     </div>
@@ -54,11 +51,16 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage}: NavProps) => {
             {
 
                 !isAboveMediaQuery && isMenuToggle && (
-                    <div className="fixed h-full top-[72px] right-0 bottom-0 bg-primary-100 w-[300px] shadow-2xl z-40">
-                        <div className="flex flex-col items-center mt-10 gap-10 text-2xl h-full">
+                    <div className="fixed h-full right-0 bottom-0 bg-primary-100 w-[300px] shadow-2xl z-40">
+                        <div className="flex justify-end mr-10 mt-4">
+                            <div className="rounded-full bg-secondary-500 p-2 cursor-pointer">
+                                <XMarkIcon onClick={()=> setIsMenuToggle(!isMenuToggle)} className="w-6 h-6 text-white cursor-pointer"/>
+                            </div>
+                        </div>
+                        <div className="flex flex-col items-center mt-16 gap-10 text-2xl h-full">
                             <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
                             <Link page="Benefits" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
-                            <Link page="Our Services" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
+                            <Link page="Our Classes" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
                             <Link page="Contact Us" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
                             <Link page="About Us" selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
                         </div>

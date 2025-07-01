@@ -17,3 +17,9 @@ export type BenefitTypes={
    title:string,
    desc:string
 }
+
+export interface OurClassesType {
+    name:string,
+    desc?:string,
+    image:string
+}
